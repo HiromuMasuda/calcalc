@@ -1,5 +1,6 @@
 height: 172.5
 weight: 72.0
 age: 24
-workout_level: 1.6
-control_calorie: 250
+sex: "man"
+activity_level: 4
+calorie_control: 5

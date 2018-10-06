@@ -15,8 +15,9 @@ git clone https://github.com/HiromuMasuda/calcalc.git
 height: 172.5
 weight: 72.0
 age: 24
-activity_level: 1.6
-control_calorie: 250
+sex: "man"
+activity_level: 4
+calorie_control: 5
 ```
 
 ### 2. Run the script.
@@ -63,8 +64,8 @@ Your activity level.
 
 BMR stands for Basal metabolic rate, in other words it is the **base** calories that you can burn in a day. The description is [here](https://en.wikipedia.org/wiki/Basal_metabolic_rate), and the fomula is below (Harris-Benedict).
 
-Man: $66.47 + 13.75*WEIGHT + 5.00*HEIGHT - 6.78*AGE$
-Woman: $65.1 + 9.56*WEIGHT + 1.85*HEIGHT - 4.68*AGE$
+Man: 66.47 + 13.75*WEIGHT + 5.00*HEIGHT - 6.78*AGE
+Woman: 65.1 + 9.56*WEIGHT + 1.85*HEIGHT - 4.68*AGE
 
 ### Step 2. Adjust for Activity
 
@@ -108,21 +109,19 @@ Here are the calorie values for each macronutrient.
 
 First, let’s start with protein. Protein is essential for the growth of new tissue as well as fixing broken tissue – like what happens when you work out. Protein should be your new best friend if you want to gain or maintain muscle.
 
-Protein(g): $WEIGHT * 2.5(g)$
-Protein(cal): $WEIGHT * 2.5(g) * 4(cal)$
+Protein(g): WEIGHT * 2.5(g)
+Protein(cal): WEIGHT * 2.5(g) * 4(cal)
 
 #### Fat
 
 Consumption of dietary fat is important for hormonal regulation, especially testosterone production. It should never be eliminated from a diet.
 
-Fat(g): $WEIGHT * 1.0(g)$
-Fat(cal): $WEIGHT * 1.0(g) * 9(cal)$
+Fat(g): WEIGHT * 1.0(g)
+Fat(cal): WEIGHT * 1.0(g) * 9(cal)
 
 #### Carbohydrate
 
 Think of all your favorite foods and chances are they are high in Carbohydrates. Your body uses carbohydrates to make glucose which is the preferred fuel or energy that our bodies run off of. They’re what keeps us going.
 
-Carbohydrate(cal): $TDEE - Protein(cal) - Far(cal)$
-Carbohydrate(g): $Carbohydrate(cal) / 4(cal/g)*
-
-
+Carbohydrate(cal): TDEE - Protein(cal) - Far(cal)
+Carbohydrate(g): Carbohydrate(cal) / 4(cal/g)
